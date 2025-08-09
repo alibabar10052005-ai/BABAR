@@ -1,117 +1,100 @@
 
-<!-- saved from url=(0054)file:///C:/Users/786/OneDrive/Desktop/web/ranking.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ODI Ranking</title>
-    <style>
-        /* Basic reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <style>
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-/* Body setup */
-body {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  background: #f5f7fa;
-  padding: 20px;
-  text-align: center;
-}
-h1{
-    
-    color: rgba(0, 0, 0, 0.812);
-    text-decoration: double;
+  body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: #f5f7fa;
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #2c3e50;
+    text-decoration: underline;
     margin-bottom: 20px;
-}
-/* Table container */
-table {
-  width: 90%;
-  max-width: 800px;
-  margin: 0 auto;
-  border-collapse: collapse;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Header styling */
-thead {
-  background-color: #2c3e50;
-  color: #fff;
-}
-
-th, td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Row hover effect */
-tbody tr:hover {
-  background-color: #eef8ff;
-}
-
-/* Image style inside cells */
-td img {
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 10px;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-
-/* Zebra striping */
-tbody tr:nth-child(even) {
-  background: #f9f9f9;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
   }
-  thead {
-    display: none;
+
+  p {
+    color: #2c3e50;
+    text-decoration: underline;
+    margin-bottom: 12px;
   }
-  tbody tr {
-    margin-bottom: 15px;
+
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0 10px;
+    background-color: #2c3e50;
+  }
+
+  table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
     background: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border-radius: 5px;
-    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 480px; 
   }
-  td {
-    position: relative;
-    padding-left: 50%;
-    text-align: right;
-  }
-  td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 15px;
-    width: 45%;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #555;
-    text-align: left;
-  }
-}
 
-    </style>
+  thead {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+
+  tbody tr:hover {
+    background-color: #eef8ff;
+  }
+
+  td img {
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  @media (max-width: 600px) {
+    th, td {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+
+    table {
+      min-width: 450px;
+    }
+  }    </style>
 </head>
 <body>
     <center>
-        <h1> <i>Men's ODI Ranking</i></h1>
+        <h1><b> <i> ICC Men's ODI Ranking </b></i></h1>
+        <p><b>Last Updated-8 August 2025</b></p>
+        <div class="container">
     <table border="1">
       <thead>
         <tr>
@@ -143,18 +126,18 @@ tbody tr:nth-child(even) {
             <td>104</td>
         </tr>
         <tr>
-            <td>5</td>
+            <td>5 </td>
             <td><img src="./ODI Ranking_files/sri.png" alt="Sri Lanka" height="10px">Sri Lanka</td>
             <td>103</td>
         </tr>
         <tr>
-            <td>6</td>
+            <td>6 </td>
             <td><img src="./ODI Ranking_files/sou.jpeg" alt="southafrica" height="10px">South Africa</td>
             <td>96</td>
         </tr>
         <tr>
             <td>7</td>
-            <td><img src="./ODI Ranking_files/afg.webp" alt="afghanisatn" height="10px">Afghanisatn</td>
+            <td><img src="./ODI Ranking_files/afg.webp" alt="afghanisatn" height="10px">Afghanistan</td>
             <td>91</td>
         </tr>
         <tr>
@@ -172,8 +155,61 @@ tbody tr:nth-child(even) {
             <td><img src="./ODI Ranking_files/wes.jpg" alt="west indies" height="10px">West Indies</td>
             <td>77</td>
         </tr>
+        
+    <tr>
+      <td>11</td>
+      <td><img src="./ODI Ranking_files/zim.png" alt="west indies" height="10px">Zimbabwe</td>
+      <td>55</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td><img src="./ODI Ranking_files/ire.png" alt="west indies" height="10px">Ireland</td>
+    <td>52</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><img src="./ODI Ranking_files/sco.jpg" alt="west indies" height="10px">ScotLand</td>
+  <td>45</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><img src="./ODI Ranking_files/usa.jpg" alt="west indies" height="10px">USA</td>
+  <td>41</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><img src="./ODI Ranking_files/net.png" alt="west indies" height="10px">NetherLands</td>
+  <td>40</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><img src="./ODI Ranking_files/oman.jpg" alt="west indies" height="10px">Oman</td>
+  <td>35</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><img src="./ODI Ranking_files/nep.png" alt="west indies" height="10px">Nepal</td>
+  <td>33</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><img src="./ODI Ranking_files/can.png" alt="west indies" height="10px">Canada</td>
+  <td>21</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><img src="./ODI Ranking_files/nam.jpg" alt="west indies" height="10px">Namibia</td>
+  <td>19</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><img src="./ODI Ranking_files/uae.jpg" alt="west indies" height="10px">UAE</td>
+  <td>8</td>
+</tr>
       </tbody>
     </table>
+    </div>
 </center>
 
-</body></html>
+</body>
+</html>
