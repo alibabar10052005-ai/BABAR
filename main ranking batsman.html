@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Men's T20 Batsman Ranking</title>
+  <style>
+    /* Global Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    /* Scrollable container wrapper */
+    .table-container {
+      width: 100%;
+      overflow-x: auto; /* Horizontal scroll if needed */
+    }
+
+    table {
+      width: 100%;
+      min-width: 400px; /* Ensure table doesn't shrink too much */
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    thead {
+      background-color: #2c3e50;
+      color: #fff;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      font-size: 14px;
+    }
+    tbody tr:nth-child(even) {
+      background: #fafafa;
+    }
+    tbody tr:hover {
+      background: #eef7ff;
+      transition: background 0.3s;
+    }
+
+    .flag {
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+    .player-pic {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: px;
+      vertical-align: middle;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .player-name {
+      vertical-align: middle;
+      font-weight: 500;
+      display: inline-block;
+      /* font-size: 12px; */
+    }
+  </style>
+</head>
+<body>
+  <h1>Men's Batsman Ranking</h1>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Pos</th>
+          <th>Team</th>
+          <th>Players</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>1</td>
+          <td><img src="india.webp" alt="India" class="flag">India</td>
+          <td><img src="abhi.jpg" alt="Abhishek Sharma" class="player-pic"><span class="player-name">Abhishek Sharma</span></td>
+          <td>829</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="aus.svg" alt="Pakistan" class="flag">Australia</td>
+            <td><img src="head.jpeg" alt="Babar Azam" class="player-pic"><span class="player-name">Travis Head</span></td>
+            <td>814</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><img src="india.webp" alt="India" class="flag">India</td>
+           <td><img src="varma.jpg" alt="Rohit Sharma" class="player-pic"><span class="player-name">Tilak Virma</span></td>
+            <td>804</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><img src="eng.png" alt="India" class="flag">England</td>
+            <td><img src="salt.webp" alt="Virat Kohli" class="player-pic"><span class="player-name">Phill Salt</span></td>
+            <td>791</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><img src="eng.png" alt="New Zealand" class="flag">England</td>
+            <td><img src="butl.webp" alt="jos buttler" class="player-pic"><span class="player-name">Jos Buttler </span></td>
+            <td>772</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><img src="india.webp" alt="Sri Lanka" class="flag">India</td>
+            <td><img src="yadav.jpg" alt="C. Asalanka" class="player-pic"><span class="player-name">Suryakumar Yadav</span></td>
+            <td>739</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><img src="sri.png" alt="Ireland" class="flag">Sri Lanka</td>
+            <td><img src="nissanka.jpeg" alt="Harry Tector" class="player-pic"><span class="player-name">Pathum Nissanka</span></td>
+            <td>736</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><img src="new.png" alt="India" class="flag">New Zealand</td>
+            <td><img src="tim.png" alt="Shreyas Iyer" class="player-pic"><span class="player-name">Tim Seifret</span></td>
+            <td>725</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><img src="aus.svg" alt="Afghanistan" class="flag">Australia</td>
+            <td><img src="inglis.jpeg" alt="Ibrahim Zadran" class="player-pic"><span class="player-name">Josh Inglis</span></td>
+            <td>717</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><img src="wes.jpg" alt="Sri Lanka" class="flag">West Indies</td>
+            <td><img src="hope.jpg" alt="Kusal Mendis" class="player-pic"><span class="player-name">Shai Hope</span></td>
+            <td>690</td>
+          </tr>
+        
+            
+          <tr>
+            <td>11</td>
+            <td><img src="india.webp" alt="India" class="flag">India</td>
+            <td><img src="jais.jpeg" alt="Yashasvi Jaiswal" class="player-pic"><span class="player-name">Yashasvi Jaiswal</span></td>
+            <td>673</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><img src="sou.jpeg" alt="South Africa" class="flag">South Africa</td>
+            <td><img src="reeza.jpeg" alt="Reeza Hendricks" class="player-pic"><span class="player-name">Reeza Hendricks</span></td>
+            <td>667</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><img src="sri.png" alt="Sri Lanka" class="flag">Sri Lanka</td>
+            <td><img src="per.jpg" alt="Kusal Perera" class="player-pic"><span class="player-name">Kusal Perera</span></td>
+            <td>665</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td><img src="pak.svg" alt="Pakistan" class="flag">Pakistan</td>
+            <td><img src="babar.jpg" alt="Babar Azam" class="player-pic"><span class="player-name">Babar Azam</span></td>
+            <td>641</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td><img src="sri.png" alt="Sri Lanka" class="flag">Sri Lanka</td>
+            <td><img src="mendis.jpeg" alt="Kusal Mendis" class="player-pic"><span class="player-name">Kusal Mendis</span></td>
+            <td>637</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td><img src="pak.svg" alt="Pakistan" class="flag">Pakistan</td>
+            <td><img src="riz.jpeg" alt="Muhammad Rizwan" class="player-pic"><span class="player-name">Muhammad Rizwan</span></td>
+            <td>635</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td><img src="eng.png" alt="England" class="flag">England</td>
+            <td><img src="duck.jpeg" alt="Ben Duckett" class="player-pic"><span class="player-name">Ben Duckett</span></td>
+            <td>635</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td><img src="aus.svg" alt="Australia" class="flag">Australia</td>
+            <td><img src="david.jpeg" alt="Tim David" class="player-pic"><span class="player-name">Tim David</span></td>
+            <td>624</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td><img src="afg.webp" alt="Afghanistan" class="flag">Afghanistan</td>
+            <td><img src="gurbaz.jpeg" alt="Kusal Mendis" class="player-pic"><span class="player-name">Rahmanullah Gurbaz</span></td>
+            <td>619</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td><img src="net.png" alt="NetherLands" class="flag">NetherLands</td>
+            <td><img src="lev.jpeg" alt="Michael Levitt" class="player-pic"><span class="player-name">Michael Levitt</span></td>
+            <td>599</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
