@@ -4,77 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ODI Ranking</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
 </head>
-<body class="bg-white text-gray-800 transition-colors duration-300 font-sans">
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+  <div class="container mx-auto p-4">
+    <h2 class="text-2xl md:text-3xl font-bold underline text-center mb-2">ICC Men's ODI Ranking</h2>
+    <p class="text-center font-semibold mb-4">Last Updated - 8 August 2025</p>
 
-  <div class="container mx-auto px-4 py-6 text-center">
+    <!-- Toggle Dark Mode -->
+    <div class="flex justify-end mb-4">
+      <button id="toggle-btn" class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
+        🌜
+      </button>
+    </div>
 
-    <!-- Heading -->
-    <h2 class="text-2xl font-bold underline mb-2">ICC Men's ODI Ranking</h2>
-    <p class="font-bold mb-6">Last Updated - 8 August 2025</p>
-
-    <!-- Toggle Button -->
-    <button id="toggleBtn" class="absolute top-4 right-4 text-lg cursor-pointer">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-
-    <!-- Table Container -->
+    <!-- Table -->
     <div class="overflow-x-auto">
-      <table class="min-w-[400px] max-w-4xl mx-auto border-collapse shadow-lg rounded-lg overflow-hidden">
-        <thead class="bg-gray-800 text-white">
+      <table class="min-w-full bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden text-left">
+        <thead class="bg-blue-600 text-white">
           <tr>
-            <th class="px-4 py-3 text-left">Pos</th>
-            <th class="px-4 py-3 text-left">Team</th>
-            <th class="px-4 py-3 text-left">Rating</th>
+            <th class="py-2 px-4">Pos</th>
+            <th class="py-2 px-4">Team</th>
+            <th class="py-2 px-4">Rating</th>
           </tr>
         </thead>
-        <tbody class="bg-white dark:bg-gray-800 transition-colors duration-300">
+        <tbody>
+          <!-- Row 1 -->
           <tr class="hover:bg-blue-50 dark:hover:bg-gray-700">
-            <td class="px-4 py-3 border-b border-gray-300">1</td>
-            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
-              <img src="india.webp" alt="India" class="h-6 rounded shadow-sm"> India
+            <td class="py-2 px-4">1</td>
+            <td class="py-2 px-4 flex items-center gap-2">
+              <img src="india.webp" alt="India" class="h-6 w-6 rounded shadow-sm">India
             </td>
-            <td class="px-4 py-3 border-b border-gray-300">124</td>
+            <td class="py-2 px-4">124</td>
           </tr>
-          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-900">
-            <td class="px-4 py-3 border-b border-gray-300">2</td>
-            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
-              <img src="new.png" alt="New Zealand" class="h-6 rounded shadow-sm"> New Zealand
+          <!-- Row 2 -->
+          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700 even:bg-gray-100 dark:even:bg-gray-700">
+            <td class="py-2 px-4">2</td>
+            <td class="py-2 px-4 flex items-center gap-2">
+              <img src="new.png" alt="New Zealand" class="h-6 w-6 rounded shadow-sm">New Zealand
             </td>
-            <td class="px-4 py-3 border-b border-gray-300">109</td>
+            <td class="py-2 px-4">109</td>
           </tr>
-          <!-- Repeat same structure for all other rows -->
+          <!-- Row 3 -->
           <tr class="hover:bg-blue-50 dark:hover:bg-gray-700">
-            <td class="px-4 py-3 border-b border-gray-300">3</td>
-            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
-              <img src="aus.svg" alt="Australia" class="h-6 rounded shadow-sm"> Australia
+            <td class="py-2 px-4">3</td>
+            <td class="py-2 px-4 flex items-center gap-2">
+              <img src="aus.svg" alt="Australia" class="h-6 w-6 rounded shadow-sm">Australia
             </td>
-            <td class="px-4 py-3 border-b border-gray-300">109</td>
+            <td class="py-2 px-4">109</td>
           </tr>
-          <!-- Example with icon -->
-          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-900">
-            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-1">
-              4 <i class="fa-solid fa-circle-chevron-up text-green-500 text-sm"></i> <small class="text-green-500">1</small>
+          <!-- Row 4 -->
+          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700 even:bg-gray-100 dark:even:bg-gray-700">
+            <td class="py-2 px-4">4 <i class="fas fa-arrow-up text-green-500 ml-1"></i> 1</td>
+            <td class="py-2 px-4 flex items-center gap-2">
+              <img src="sri.png" alt="Pakistan" class="h-6 w-6 rounded shadow-sm">Pakistan
             </td>
-            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
-              <i class="fa-solid fa-circle-chevron-up text-green-500 text-sm"></i>
-              <small class="text-green-500">1</small>
-              <img src="sri.png" alt="Pakistan" class="h-6 rounded shadow-sm"> Pakistan
-            </td>
-            <td class="px-4 py-3 border-b border-gray-300">104</td>
+            <td class="py-2 px-4">104</td>
           </tr>
+          <!-- Row 5 -->
+          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700">
+            <td class="py-2 px-4">5 <i class="fas fa-arrow-down text-red-500 ml-1"></i> 1</td>
+            <td class="py-2 px-4 flex items-center gap-2">
+              <img src="pak.svg" alt="Sri Lanka" class="h-6 w-6 rounded shadow-sm">Sri Lanka
+            </td>
+            <td class="py-2 px-4">103</td>
+          </tr>
+          <!-- Add the remaining rows in similar pattern -->
         </tbody>
       </table>
     </div>
   </div>
 
   <script>
-    const toggleBtn = document.getElementById('toggleBtn');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggleBtn.innerHTML = document.body.classList.contains('dark') ? '🌞' : '<i class="fa-solid fa-moon"></i>';
+    const btn = document.getElementById('toggle-btn');
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      btn.textContent = document.documentElement.classList.contains('dark') ? '🌞' : '🌜';
     });
   </script>
 </body>
