@@ -4,78 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ODI Ranking</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="bg-light text-dark">
+<body class="bg-white text-gray-800 transition-colors duration-300 font-sans">
 
-<div class="container py-5 text-center">
+  <div class="container mx-auto px-4 py-6 text-center">
 
-  <!-- Heading -->
-  <h2 class="mb-2"><b><i>ICC Men's ODI Ranking</i></b></h2>
-  <p class="mb-4 fw-bold">Last Updated - 8 August 2025</p>
+    <!-- Heading -->
+    <h2 class="text-2xl font-bold underline mb-2">ICC Men's ODI Ranking</h2>
+    <p class="font-bold mb-6">Last Updated - 8 August 2025</p>
 
-  <!-- Toggle Button -->
-  <button id="toggleBtn" class="btn btn-outline-dark mb-4">
-    <i class="fa-solid fa-moon"></i>
-  </button>
+    <!-- Toggle Button -->
+    <button id="toggleBtn" class="absolute top-4 right-4 text-lg cursor-pointer">
+      <i class="fa-solid fa-moon"></i>
+    </button>
 
-  <!-- Table -->
-  <div class="table-responsive">
-    <table class="table table-hover table-bordered align-middle shadow-sm">
-      <thead class="table-dark text-white">
-        <tr>
-          <th>Pos</th>
-          <th>Team</th>
-          <th>Rating</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><img src="india.webp" alt="India" class="me-2" style="height:24px;">India</td>
-          <td>124</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><img src="new.png" alt="New Zealand" class="me-2" style="height:24px;">New Zealand</td>
-          <td>109</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><img src="aus.svg" alt="Australia" class="me-2" style="height:24px;">Australia</td>
-          <td>109</td>
-        </tr>
-        <tr>
-          <td>4 <i class="fa-solid fa-circle-chevron-up text-success"></i> <small class="text-success">1</small></td>
-          <td>
-            <i class="fa-solid fa-circle-chevron-up text-success"></i> <small class="text-success">1</small>
-            <img src="sri.png" alt="Pakistan" class="me-2" style="height:24px;">Pakistan
-          </td>
-          <td>104</td>
-        </tr>
-        <tr>
-          <td>5 <i class="fa-solid fa-circle-chevron-down text-danger"></i> <small class="text-danger">1</small></td>
-          <td><img src="pak.svg" alt="Sri Lanka" class="me-2" style="height:24px;">Sri Lanka</td>
-          <td>103</td>
-        </tr>
-        <!-- Continue with remaining rows in similar way -->
-      </tbody>
-    </table>
+    <!-- Table Container -->
+    <div class="overflow-x-auto">
+      <table class="min-w-[400px] max-w-4xl mx-auto border-collapse shadow-lg rounded-lg overflow-hidden">
+        <thead class="bg-gray-800 text-white">
+          <tr>
+            <th class="px-4 py-3 text-left">Pos</th>
+            <th class="px-4 py-3 text-left">Team</th>
+            <th class="px-4 py-3 text-left">Rating</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white dark:bg-gray-800 transition-colors duration-300">
+          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700">
+            <td class="px-4 py-3 border-b border-gray-300">1</td>
+            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
+              <img src="india.webp" alt="India" class="h-6 rounded shadow-sm"> India
+            </td>
+            <td class="px-4 py-3 border-b border-gray-300">124</td>
+          </tr>
+          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-900">
+            <td class="px-4 py-3 border-b border-gray-300">2</td>
+            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
+              <img src="new.png" alt="New Zealand" class="h-6 rounded shadow-sm"> New Zealand
+            </td>
+            <td class="px-4 py-3 border-b border-gray-300">109</td>
+          </tr>
+          <!-- Repeat same structure for all other rows -->
+          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700">
+            <td class="px-4 py-3 border-b border-gray-300">3</td>
+            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
+              <img src="aus.svg" alt="Australia" class="h-6 rounded shadow-sm"> Australia
+            </td>
+            <td class="px-4 py-3 border-b border-gray-300">109</td>
+          </tr>
+          <!-- Example with icon -->
+          <tr class="hover:bg-blue-50 dark:hover:bg-gray-700 bg-gray-100 dark:bg-gray-900">
+            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-1">
+              4 <i class="fa-solid fa-circle-chevron-up text-green-500 text-sm"></i> <small class="text-green-500">1</small>
+            </td>
+            <td class="px-4 py-3 border-b border-gray-300 flex items-center gap-2">
+              <i class="fa-solid fa-circle-chevron-up text-green-500 text-sm"></i>
+              <small class="text-green-500">1</small>
+              <img src="sri.png" alt="Pakistan" class="h-6 rounded shadow-sm"> Pakistan
+            </td>
+            <td class="px-4 py-3 border-b border-gray-300">104</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  const toggleBtn = document.getElementById('toggleBtn');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('bg-dark');
-    document.body.classList.toggle('text-white');
-    toggleBtn.innerHTML = document.body.classList.contains('bg-dark') ? '🌞' : '<i class="fa-solid fa-moon"></i>';
-  });
-</script>
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.innerHTML = document.body.classList.contains('dark') ? '🌞' : '<i class="fa-solid fa-moon"></i>';
+    });
+  </script>
 </body>
 </html>
