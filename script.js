@@ -1,31 +1,52 @@
 const searchButton = document.getElementById("searchButton");
+const propertySearch = document.getElementById("propertySearch");
 
-searchButton.addEventListener("click", function () {
+searchButton.addEventListener("click", searchProperty);
 
-    let location = document
-        .getElementById("propertySearch")
-        .value
-        .trim();
-
-    if (location === "") {
-        alert("Please enter a location.");
-        return;
-    }
-
-    let mapURL =
-        "https://www.google.com/maps/search/?api=1&query=" +
-        encodeURIComponent(location);
-
-    window.open(mapURL, "_blank");
+propertySearch.addEventListener("keypress", function(event) {
+if (event.key === "Enter") {
+searchProperty();
+}
 });
 
+function searchProperty() {
+const location = propertySearch.value.trim();
 
-document
-    .getElementById("propertySearch")
-    .addEventListener("keypress", function (event) {
+```
+if (!location) {
+    alert("Please enter a location.");
+    propertySearch.focus();
+    return;
+}
 
-        if (event.key === "Enter") {
-            searchButton.click();
-        }
+const mapURL =
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(location);
 
-    });
+window.open(mapURL, "_blank");
+```
+
+}
+
+const worthButton = document.getElementById("worthButton");
+const address = document.getElementById("address");
+
+worthButton.addEventListener("click", function() {
+
+```
+const value = address.value.trim();
+
+if (!value) {
+    alert("Please enter your home address.");
+    address.focus();
+    return;
+}
+
+const mapURL =
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(value);
+
+window.open(mapURL, "_blank");
+```
+
+});
