@@ -1,861 +1,225 @@
-/* =========================
-   RESET
-========================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%}
+body{font-family:'Poppins',sans-serif;background:#111;color:#fff;overflow-x:hidden}
+
+.website{width:100%;height:100vh;display:flex}
+.main-content{flex:1;min-width:0;height:100vh}
+
+
+.sidebar{
+    width:155px;height:100vh;flex-shrink:0;
+    padding:24px 12px;background:rgba(22,22,22,.97);
+    position:relative;z-index:20
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
+.brand{text-align:center;margin-bottom:38px}
+.iron-logo{line-height:18px;letter-spacing:2px;color:#d5d5d5}
+.iron-logo span,.iron-logo strong,.brand small{display:block}
+.iron-logo span{font-size:17px;font-weight:600}
+.iron-logo strong{font-size:22px;letter-spacing:3px}
+.brand small{margin-top:6px;font-size:7px;letter-spacing:3px;color:#999}
+
+
+.navigation{display:flex;flex-direction:column;gap:8px}
+.nav-link{
+    display:block;padding:7px 11px;color:#eee;
+    text-decoration:none;font-size:9px;font-weight:500;
+    letter-spacing:.5px;border-radius:20px;transition:.25s
 }
+.nav-link:hover,.nav-link.active{background:#454545}
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #111;
-    color: white;
-    overflow-x: hidden;
+.social{
+    position:absolute;bottom:25px;left:0;width:100%;
+    display:flex;justify-content:center;gap:6px
 }
-
-
-/* =========================
-   MAIN WEBSITE
-========================= */
-
-.website {
-    width: 100%;
-    height: 100vh;
-    display: flex;
+.social a{
+    width:21px;height:21px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:#333;color:#fff;text-decoration:none;
+    font-size:9px;transition:.2s
 }
+.social a:hover{background:#bd7950;transform:translateY(-2px)}
 
 
-/* =========================
-   SIDEBAR
-========================= */
-
-.sidebar {
-    width: 155px;
-    height: 100vh;
-    flex-shrink: 0;
-
-    background: rgba(22, 22, 22, 0.97);
-
-    padding: 24px 12px;
-
-    position: relative;
-    z-index: 20;
+.hero{
+    height:calc(100vh - 105px);min-height:450px;
+    position:relative;overflow:hidden;background:#777
 }
-
-
-/* =========================
-   IRON VALLEY LOGO
-========================= */
-
-.brand {
-    text-align: center;
-    margin-bottom: 38px;
+.house-image{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center;z-index:1
 }
-
-.iron-logo {
-    line-height: 18px;
-    letter-spacing: 2px;
-    color: #d5d5d5;
-}
-
-.iron-logo span {
-    display: block;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.iron-logo strong {
-    display: block;
-    font-size: 22px;
-    letter-spacing: 3px;
-}
-
-.brand small {
-    display: block;
-    margin-top: 6px;
-
-    font-size: 7px;
-    letter-spacing: 3px;
-
-    color: #999;
+.hero-overlay{
+    position:absolute;inset:0;z-index:2;
+    background:linear-gradient(90deg,rgba(0,0,0,.48),
+    rgba(0,0,0,.18) 45%,rgba(0,0,0,.05))
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.agent-image{
+    position:absolute;z-index:5;left:-9%;bottom:-2%;
+    height:100%;width:auto;max-width:64%;
+    object-fit:contain;object-position:bottom;
+    filter:drop-shadow(5px 8px 12px rgba(0,0,0,.35))
 }
-
-.nav-link {
-    display: block;
-
-    padding: 7px 11px;
-
-    color: #eee;
-    text-decoration: none;
-
-    font-size: 9px;
-    letter-spacing: 0.4px;
-
-    border-radius: 20px;
-
-    transition: 0.25s ease;
+.agent-name{
+    position:absolute;z-index:7;left:7.5%;bottom:20px;
+    padding:4px 18px 5px;background:rgba(30,30,30,.7);
+    border-radius:3px;transform:rotate(-4deg)
 }
-
-.nav-link:hover {
-    background: #454545;
+.agent-name span,.agent-name strong{display:block}
+.agent-name span{
+    color:#c59a78;font-size:25px;line-height:22px;
+    font-weight:600;letter-spacing:1px
 }
-
-.nav-link.active {
-    background: #4c4c4c;
+.agent-name strong{
+    color:#ddd;font-size:17px;line-height:17px;font-weight:400
 }
 
 
-/* =========================
-   SOCIAL ICONS
-========================= */
-
-.social {
-    position: absolute;
-
-    bottom: 25px;
-    left: 0;
-
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-
-    gap: 6px;
+.hero-search{
+    position:absolute;z-index:8;left:61%;bottom:19%;
+    width:42%;transform:translate(-50%,-50%)
 }
-
-.social a {
-    width: 21px;
-    height: 21px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: #333;
-
-    color: white;
-    text-decoration: none;
-
-    font-size: 9px;
-
-    transition: 0.2s;
+.hero-search h2{
+  margin-bottom:10px;
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:1px;
+  background:linear-gradient(#fff,#bd7950);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:none;
 }
-
-.social a:hover {
-    background: #bd7950;
+.search-box{
+    width:100%;height:37px;display:flex;
+    background:#fff;border-radius:3px;overflow:hidden;
+    box-shadow:0 3px 8px rgba(0,0,0,.25)
 }
-
-
-/* =========================
-   MAIN CONTENT
-========================= */
-
-.main-content {
-    flex: 1;
-    min-width: 0;
-    height: 100vh;
+.search-box input{
+    flex:1;min-width:0;border:0;outline:0;
+    padding:0 12px;color:#555;font-family:inherit;font-size:12px
 }
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    height: calc(100vh - 105px);
-    min-height: 450px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background: #777;
+.search-box input::placeholder{color:#888}
+.search-box button{
+    width:45px;border:0;background:#bd7950;color:#fff;
+    cursor:pointer;font-size:14px;transition:.2s
 }
+.search-box button:hover{background:#995c38}
 
-
-/* =========================
-   HOUSE IMAGE
-========================= */
-
-.house-image {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    z-index: 1;
+.bottom-section{
+    height:105px;width:100%;display:grid;
+    grid-template-columns:42% 58%
 }
+.new-listings{
+    height:100%;padding:19px 32px;
+    background:linear-gradient(rgba(182,100,57,.9),rgba(159,79,41,.9))
+}
+.bottom-content h2,.worth-content h2{font-weight:600}
+.bottom-content h2{font-size:18px;line-height:20px}
+.bottom-content p{margin:2px 0 8px;font-size:10px;color:#f1f1f1}
+.orange-button{
+    display:inline-block;padding:5px 13px;
+    border:1px solid rgba(255,255,255,.55);
+    border-radius:2px;color:#fff;text-decoration:none;
+    font-size:8px;transition:.2s
+}
+.orange-button:hover{background:rgba(255,255,255,.12)}
 
 
-/* =========================
-   DARK OVERLAY
-========================= */
+.home-worth{
+    height:100%;padding:17px 28px;
+    background:rgba(25,25,25,.97)
+}
+.worth-content h2{font-size:17px;line-height:20px}
+.worth-content p{margin:2px 0 8px;font-size:9px;color:#cfcfcf}
+.worth-form{
+    width:420px;max-width:100%;height:29px;
+    display:flex;background:#fff;overflow:hidden;border-radius:2px
+}
+.worth-form input{
+    flex:1;min-width:0;border:0;outline:0;
+    padding:0 9px;font-family:inherit;font-size:10px;color:#444
+}
+.worth-form select{
+    width:58px;border:0;border-left:1px solid #ddd;
+    outline:0;font-family:inherit;font-size:9px;color:#555
+}
+.worth-form button{
+    width:34px;border:0;background:#444;color:#fff;
+    cursor:pointer;font-size:12px
+}
+.worth-form button:hover{background:#666}
 
-.hero-overlay {
-    position: absolute;
+.email{
+    height:35px;display:flex;align-items:center;
+    justify-content:center;background:#111
+}
+.email a{
+    color:#c59a78;text-decoration:none;font-size:10px
+}
+.email a:hover{color:#fff}
 
-    inset: 0;
 
-    z-index: 2;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.48) 0%,
-            rgba(0, 0, 0, 0.18) 45%,
-            rgba(0, 0, 0, 0.05) 100%
-        );
+@media(max-width:900px){
+    .sidebar{width:145px}
+    .agent-image{left:3%;height:70%}
+    .hero-search{left:63%;width:45%}
+    .new-listings{padding:19px 20px}
+    .home-worth{padding:17px 20px}
 }
 
 
-/* =========================
-   PERSON / LOGO IMAGE
-========================= */
-
-.agent-image {
-    position: absolute;
-
-    z-index: 5;
-
-    left: -9%;
-    bottom: -2%;
-
-    height: 100%;
-    width: auto;
-
-    max-width: 54%;
-
-    object-fit: contain;
-    object-position: bottom;
-
-    filter:
-        drop-shadow(
-            5px 8px 12px rgba(0, 0, 0, 0.35)
-        );
-}
-
-
-/* =========================
-   ROB CLEAPOR
-========================= */
-
-.agent-name {
-    position: absolute;
-
-    z-index: 7;
-
-    left: 7.5%;
-    bottom: 20px;
-
-    padding: 4px 18px 5px 18px;
-
-    background: rgba(30, 30, 30, 0.70);
-
-    transform: rotate(-4deg);
-
-    border-radius: 3px;
-}
-
-.agent-name span {
-    display: block;
-
-    font-family: Georgia, serif;
-
-    font-size: 25px;
-    line-height: 22px;
-
-    color: #c59a78;
-}
-
-.agent-name strong {
-    display: block;
-
-    margin-top: 0;
-
-    font-family: Georgia, serif;
-
-    font-size: 17px;
-    line-height: 17px;
-
-    color: #ddd;
-}
-
-
-/* =========================
-   SEARCH AREA
-========================= */
-
-.hero-search {
-    position: absolute;
-
-    z-index: 8;
-
-    left: 61%;
-    
-    bottom: 19%;
-
-    width: 42%;
-
-    transform: translate(-50%, -50%);
-}
-
-.hero-search h2 {
-    margin-bottom: 7px;
-
-    font-size: 13px;
-    font-weight: bold;
-
-    letter-spacing: 0.3px;
-
-    color: white;
-
-    text-shadow: 0 2px 4px #000;
-}
-
-.search-box {
-    width: 100%;
-    height: 37px;
-    
-    display: flex;
-
-    background: white;
-
-    border-radius: 3px;
-
-    overflow: hidden;
-
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
-}
-
-.search-box input {
-    flex: 1;
-    min-width: 0;
-
-    border: none;
-    outline: none;
-
-    padding: 0 12px;
-
-    color: #555;
-
-    font-size: 12px;
-}
-
-.search-box input::placeholder {
-    color: #888;
-}
-
-.search-box button {
-    width: 45px;
-
-    border: none;
-
-    background: #bd7950;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 14px;
-
-    transition: 0.2s;
-}
-
-.search-box button:hover {
-    background: #995c38;
-}
-
-
-/* =========================
-   BOTTOM SECTION
-========================= */
-
-.bottom-section {
-    height: 105px;
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: 42% 58%;
-}
-
-
-/* =========================
-   NEWEST LISTINGS
-========================= */
-
-.new-listings {
-    height: 100%;
-
-    padding: 19px 32px;
-
-    background:
-        linear-gradient(
-            rgba(182, 100, 57, 0.90),
-            rgba(159, 79, 41, 0.90)
-        );
-}
-
-.bottom-content h2 {
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: bold;
-}
-
-.bottom-content p {
-    margin-top: 2px;
-    margin-bottom: 8px;
-
-    font-size: 10px;
-
-    color: #f1f1f1;
-}
-
-.orange-button {
-    display: inline-block;
-
-    padding: 5px 13px;
-
-    border: 1px solid rgba(255,255,255,0.55);
-
-    border-radius: 2px;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 8px;
-
-    transition: 0.2s;
-}
-
-.orange-button:hover {
-    background: rgba(255,255,255,0.12);
-}
-
-
-/* =========================
-   HOME WORTH
-========================= */
-
-.home-worth {
-    height: 100%;
-
-    padding: 17px 28px;
-
-    background: rgba(25, 25, 25, 0.97);
-}
-
-.worth-content h2 {
-    font-size: 17px;
-    line-height: 20px;
-}
-
-.worth-content p {
-    margin-top: 2px;
-    margin-bottom: 8px;
-
-    font-size: 9px;
-
-    color: #cfcfcf;
-}
-
-.worth-form {
-    width: 420px;
-    max-width: 100%;
-
-    height: 29px;
-
-    display: flex;
-
-    background: white;
-
-    overflow: hidden;
-
-    border-radius: 2px;
-}
-
-.worth-form input {
-    flex: 1;
-    min-width: 0;
-
-    border: none;
-    outline: none;
-
-    padding: 0 9px;
-
-    font-size: 10px;
-
-    color: #444;
-}
-
-.worth-form select {
-    width: 58px;
-
-    border: none;
-
-    border-left: 1px solid #ddd;
-
-    outline: none;
-
-    font-size: 9px;
-
-    color: #555;
-}
-
-.worth-form button {
-    width: 34px;
-
-    border: none;
-
-    background: #444;
-
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 12px;
-}
-
-.worth-form button:hover {
-    background: #666;
-}
-
-
-/* =========================
-   EMAIL
-========================= */
-
-.email {
-    height: 35px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background: #111;
-}
-
-/* email a {
-    color: #c59a78;
-
-    text-decoration: none;
-
-    font-size: 10px;
-}
-
-.email a:hover {
-    color: white;
-}. */
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-    .sidebar {
-        width: 145px;
+@media(max-width:700px){
+    .website{height:auto;min-height:100vh;display:block}
+    .sidebar{width:100%;height:auto;padding:12px}
+    .brand{margin-bottom:12px}
+    .navigation{
+        flex-direction:row;flex-wrap:wrap;
+        justify-content:center;gap:4px
     }
+    .nav-link{padding:6px 8px;font-size:8px}
+    .social{display:none}
+    .main-content{height:auto}
 
-    .agent-image {
-        left: 3%;
-        height: 70%;
-    }
+    .hero{height:500px;min-height:500px}
+    .agent-image{left:0;height:55%;max-width:50%}
+    .agent-name{left:3%;bottom:15px}
 
-    .hero-search {
-        left: 63%;
-        width: 45%;
-    }
+    .hero-search{top:27%;left:62%;width:55%}
+    .hero-search h2{font-size:11px}
+    .search-box{height:32px}
+    .search-box input{font-size:9px}
 
-    .new-listings {
-        padding: 19px 20px;
-    }
-
-    .home-worth {
-        padding: 17px 20px;
-    }
-
+    .bottom-section{height:auto;display:block}
+    .new-listings,.home-worth{min-height:125px;height:auto}
+    .email{height:45px}
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+@media(max-width:480px){
+    .hero{height:450px;min-height:450px}
+    .navigation{gap:2px}
+    .nav-link{font-size:7px;padding:5px 6px}
 
-@media (max-width: 700px) {
+    .agent-image{height:48%;left:-4%}
+    .hero-search{top:24%;left:58%;width:60%}
+    .hero-search h2{font-size:9px}
+    .search-box{height:32px}
+    .search-box input{font-size:8px}
+    .search-box button{width:35px;font-size:11px}
 
-    .website {
-        height: auto;
-        min-height: 100vh;
+    .agent-name{left:3%;bottom:12px;padding:3px 12px}
+    .agent-name span{font-size:21px;line-height:19px}
+    .agent-name strong{font-size:14px;line-height:14px}
 
-        display: block;
-    }
-
-
-    /* SIDEBAR */
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-
-        min-height: 0;
-
-        padding: 12px;
-    }
-
-
-    .brand {
-        margin-bottom: 12px;
-    }
-
-
-    .navigation {
-        flex-direction: row;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        gap: 4px;
-    }
-
-
-    .nav-link {
-        padding: 6px 8px;
-
-        font-size: 8px;
-    }
-
-
-    .social {
-        display: none;
-    }
-
-
-    /* MAIN */
-
-    .main-content {
-        height: auto;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        height: 500px;
-
-        min-height: 500px;
-    }
-
-
-    .agent-image {
-        left: 0;
-
-        height: 55%;
-
-        max-width: 50%;
-    }
-
-
-    .agent-name {
-        left: 3%;
-
-        bottom: 15px;
-    }
-
-
-    /* SEARCH */
-
-    .hero-search {
-        top: 27%;
-
-        left: 62%;
-
-        width: 55%;
-    }
-
-
-    .hero-search h2 {
-        font-size: 11px;
-    }
-
-
-    .search-box {
-        height: 32px;
-    }
-
-
-    .search-box input {
-        font-size: 9px;
-    }
-
-
-    /* BOTTOM */
-
-    .bottom-section {
-        height: auto;
-
-        display: block;
-    }
-
-
-    .new-listings,
-    .home-worth {
-        min-height: 125px;
-
-        height: auto;
-    }
-
-
-    /* EMAIL */
-
-    .email {
-        height: 45px;
-    }
-
-    .email a {
-        font-size: 10px;
-    }
-
+    .new-listings,.home-worth{padding:17px 20px}
+    .bottom-content h2,.worth-content h2{font-size:15px}
+    .worth-form{width:100%}
+    .worth-form input{font-size:9px}
+    .email{height:42px}
 }
 
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-
-    .hero {
-        height: 450px;
-
-        min-height: 450px;
-    }
-
-
-    .navigation {
-        gap: 2px;
-    }
-
-
-    .nav-link {
-        font-size: 7px;
-
-        padding: 5px 6px;
-    }
-
-
-    .agent-image {
-        height: 48%;
-
-        left: -4%;
-    }
-
-
-    .hero-search {
-        top: 24%;
-
-        left: 58%;
-
-        width: 60%;
-    }
-
-
-    .hero-search h2 {
-        font-size: 9px;
-    }
-
-
-    .search-box {
-        height: 32px;
-    }
-
-
-    .search-box input {
-        font-size: 8px;
-    }
-
-
-    .search-box button {
-        width: 35px;
-        font-size: 11px;
-    }
-
-
-    .agent-name {
-        left: 3%;
-        bottom: 12px;
-
-        padding: 3px 12px;
-    }
-
-
-    .agent-name span {
-        font-size: 21px;
-        line-height: 19px;
-    }
-
-
-    .agent-name strong {
-        font-size: 14px;
-        line-height: 14px;
-    }
-
-
-    .new-listings,
-    .home-worth {
-        padding: 17px 20px;
-    }
-
-
-    .bottom-content h2,
-    .worth-content h2 {
-        font-size: 15px;
-    }
-
-
-    .worth-form {
-        width: 100%;
-    }
-
-
-    .worth-form input {
-        font-size: 9px;
-    }
-
-
-    .email {
-        height: 42px;
-    }
-
-}
