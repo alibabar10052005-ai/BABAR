@@ -120,7 +120,7 @@ background:#bd7950;
 transform:translateY(-2px);
 }
 
-/* HERO */
+
 
 .main-content{
 flex:1;
@@ -157,7 +157,7 @@ rgba(0,0,0,.05)
 );
 }
 
-/* AGENT */
+
 
 .agent-image{
 position:absolute;
@@ -203,7 +203,7 @@ line-height:17px;
 font-weight:400;
 }
 
-/* SEARCH */
+
 
 .hero-search{
 position:absolute;
@@ -261,7 +261,7 @@ transition:.2s;
 
 .search-box button:hover
 
-/* BOTTOM */
+
 
 .bottom-section{
 width:100%;
@@ -367,7 +367,6 @@ font-size:12px;
 
 .worth-form button:hover
 
-/* TABLET */
 
 @media(max-width:900px){
 
@@ -397,7 +396,6 @@ font-size:12px;
 
 }
 
-/* MOBILE */
 
 @media(max-width:700px){
 
@@ -583,7 +581,7 @@ body{
 
 }
 
-/* SMALL PHONES */
+
 
 @media(max-width:480px){
 
@@ -657,7 +655,6 @@ body{
 
 }
 
-/* VERY SMALL PHONES */
 
 @media(max-width:360px){
 
