@@ -1,23 +1,31 @@
 const searchButton = document.getElementById("searchButton");
-const propertySearch = document.getElementById("propertySearch");
 
-function searchProperty() {
-    const location = propertySearch.value.trim();
+searchButton.addEventListener("click", function () {
+
+    let location = document
+        .getElementById("propertySearch")
+        .value
+        .trim();
 
     if (location === "") {
         alert("Please enter a location.");
         return;
     }
 
-    const mapURL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
+    let mapURL =
+        "https://www.google.com/maps/search/?api=1&query=" +
+        encodeURIComponent(location);
 
-    window.location.href = mapURL;
-}
-
-searchButton.addEventListener("click", searchProperty);
-
-propertySearch.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        searchProperty();
-    }
+    window.open(mapURL, "_blank");
 });
+
+
+document
+    .getElementById("propertySearch")
+    .addEventListener("keypress", function (event) {
+
+        if (event.key === "Enter") {
+            searchButton.click();
+        }
+
+    });
